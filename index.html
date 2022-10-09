@@ -1,3 +1,4 @@
+<!-- ty -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +20,7 @@
         }
         .container_raiz {
             width: 700px;
-            height: 400px;
+            height: 430px;
             background-color: rgb(68, 171, 255);
             padding: 10px;
         }
@@ -30,7 +31,7 @@
         }
         .inputs_datas{
             margin-left: 1em;
-            width: 10em;
+            width: 5.5em;
             margin: 0.5em;
         }
         .container_main{
@@ -49,12 +50,31 @@
             margin: 1em;
             padding: 0.5em;
             border-radius: 10px;
-            width: 200px;
+            width: 128px;
             height: 290px;
+            font-size: 13px;
+            border: solid white;
+        }
+        .input_valores_box_adicionais{
+            margin: 1em;
+            padding: 0.5em;
+            border-radius: 10px;
+            width: 300px;
+            height: 290px;
+            font-size: 14px;
+            border: solid white;
+            display: flex;
+            flex-direction: row;
         }
         #listavalores{
             font-size: 12px;
             list-style: none;
+        }
+        .labels_contador{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
         }
     </style>
 </head>
@@ -63,37 +83,47 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
     <noscript>Seu navegador não tem suporte ou encontrasse com javascript desabilitado</noscript>
     <div class="container_raiz">
-        <h1>Calculadora de moedas</h1>
+        <div style="width: 100%; display: flex; justify-content: center; color: white;"><h1 style="text-shadow: 0px 2px 8px grey;">Calculadora de moedas</h1></div>
         <div class="container_main">
             <fieldset class="input_valores_box">
-                <legend><b>Moedas</b></legend>
-                <p><b>R$ 0,05</b><input class="inputs_valores" type="number" id="5cents" value=""></p>
-                <p><b>R$ 0,10</b><input class="inputs_valores" type="number" id="10cents" value=""></p>
-                <p><b>R$ 0,25</b><input class="inputs_valores" type="number" id="25cents" value=""></p>
-                <p><b>R$ 0,50</b><input class="inputs_valores" type="number" id="50cents" value=""></p>
-                <p><b>R$ 1,00</b><input class="inputs_valores" type="number" id="1real" value=""></p>
+                <legend style="color: white; font-size: 19px;"><b>Moedas</b></legend>
+                <p class="labels_contador"><b>R$ 0,05</b><input class="inputs_valores" type="number" id="5cents" value=""></p>
+                <p class="labels_contador"><b>R$ 0,10</b><input class="inputs_valores" type="number" id="10cents" value=""></p>
+                <p class="labels_contador"><b>R$ 0,25</b><input class="inputs_valores" type="number" id="25cents" value=""></p>
+                <p class="labels_contador"><b>R$ 0,50</b><input class="inputs_valores" type="number" id="50cents" value=""></p>
+                <p class="labels_contador"><b>R$ 1,00</b><input class="inputs_valores" type="number" id="1real" value=""></p>
             </fieldset>
             <fieldset class="input_valores_box">
-                <legend><b>Notas</b></legend>
-                <p><b>R$ 2,00</b><input class="inputs_valores" type="number" id="2reais" value=""></p>
-                <p><b>R$ 5,00</b><input class="inputs_valores" type="number" id="5reais" value=""></p>
-                <p><b>R$ 10,00</b><input class="inputs_valores" type="number" id="10reais" value=""></p>
-                <p><b>R$ 20,00</b><input class="inputs_valores" type="number" id="20reais" value=""></p>
-                <p><b>R$ 50,00</b><input class="inputs_valores" type="number" id="50reais" value=""></p>
-                <p><b>R$ 100,00</b><input class="inputs_valores" type="number" id="100reais" value=""></p>
-                <p><b>R$ 200,00</b><input class="inputs_valores" type="number" id="200reais" value=""></p>
+                <legend style="color: white; font-size: 19px;"><b>Notas</b></legend>
+                <p class="labels_contador"><b>R$ 2,00</b><input class="inputs_valores" type="number" id="2reais" value=""></p>
+                <p class="labels_contador"><b>R$ 5,00</b><input class="inputs_valores" type="number" id="5reais" value=""></p>
+                <p class="labels_contador"><b>R$ 10,00</b><input class="inputs_valores" type="number" id="10reais" value=""></p>
+                <p class="labels_contador"><b>R$ 20,00</b><input class="inputs_valores" type="number" id="20reais" value=""></p>
+                <p class="labels_contador"><b>R$ 50,00</b><input class="inputs_valores" type="number" id="50reais" value=""></p>
+                <p class="labels_contador"><b>R$ 100,00</b><input class="inputs_valores" type="number" id="100reais" value=""></p>
+                <p class="labels_contador"><b>R$ 200,00</b><input class="inputs_valores" type="number" id="200reais" value=""></p>
             </fieldset>
-            <fieldset class="input_valores_box">
-                <legend><b>Valores dos caixas</b></legend>
-                <p><b>Datas: </b><input class="inputs_datas" type="text" id="inputs_datas" value=""></p>
-                <script type="text/javascript">
-                    $("#inputs_datas").mask("00/00/0000");
-                </script>
-                <p><b>Valor Especie: </b><input class="inputs_datas" type="number" id="inputs_values" value=""></p>
-                <button id="adicionar" onclick="adicionar()">Adicionar</button>
-                <p id="lista_valores_caixas">Valores caixas:</p>
-                <ul id="listavalores">
-                </ul>
+            <fieldset class="input_valores_box_adicionais">
+                <legend style="color: white; font-size: 19px;"><b>Valores dos caixas</b></legend>
+                <fieldset style="border: none; padding: 5px; border-right: solid white 2px;">
+                    <p style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;"><b>Datas: </b><input class="inputs_datas" type="text" id="inputs_datas" value=""></p>
+                    <script type="text/javascript">
+                        $("#inputs_datas").mask("00/00/0000");
+                    </script>
+                    <p style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;"><b>Espécie: </b><input class="inputs_datas" type="number" id="inputs_values" style="width: 4em;" value=""></p>
+                    <button id="adicionar" onclick="adicionar()">Adicionar</button>
+                    <p id="lista_valores_caixas">Valores caixas:</p>
+                    <ul id="listavalores">
+                    </ul>
+                </fieldset>
+                <fieldset style="border: none; padding: 5px; margin-left: 3px;">
+                    <p style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;"><b>Despesa: </b><input class="inputs_datas" type="text"></p>
+                    <p style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;"><b>Valor: </b><input class="inputs_datas" type="number"></p>
+                    <button id="adicionar_despesa" onclick="adicionar_despesa()">Adicionar</button>
+                    <p id="lista_valores_despesas">Valores despesas:</p>
+                    <ul id="lista_v_despesas">
+                    </ul>
+                </fieldset>
             </fieldset>
         </div>
         <div class="container_print_valores">
