@@ -69,6 +69,7 @@
         #listavalores{
             font-size: 12px;
             list-style: none;
+            width: 150px;
         }
         .labels_contador{
             display: flex;
@@ -117,11 +118,11 @@
                     </ul>
                 </fieldset>
                 <fieldset style="border: none; padding: 5px; margin-left: 3px;">
-                    <p style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;"><b>Despesa: </b><input class="inputs_datas" type="text"></p>
-                    <p style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;"><b>Valor: </b><input class="inputs_datas" type="number"></p>
-                    <button id="adicionar_despesa" onclick="adicionar_despesa()">Adicionar</button>
+                    <p style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;"><b>Despesa: </b><input class="inputs_datas" id="inputdescricao_desp" type="text"></p>
+                    <p style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;"><b>Valor: </b><input class="inputs_datas" id="inputvalor_desp" type="number"></p>
+                    <button id="adicionar_despesa" onclick="adicionar_despesas()">Adicionar</button>
                     <p id="lista_valores_despesas">Valores despesas:</p>
-                    <ul id="lista_v_despesas">
+                    <ul id="listadespesas">
                     </ul>
                 </fieldset>
             </fieldset>
