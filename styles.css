@@ -1,0 +1,241 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #bddcff;
+    height: 100vh;
+}
+.container_raiz {
+    width: 800px;
+    /* height: 600px; */
+    /* background-color: rgb(68, 171, 255); */
+    padding: 10px;
+    box-shadow: 0px 2px 8px #285574;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.inputs_valores {
+    margin-left: 1em;
+    width: 3em;
+    margin: 0.5em;
+}
+.inputs_datas{
+    margin-left: 1em;
+    width: 5.5em;
+    margin: 0.5em;
+}
+.container_main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.container_print_valores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.input_valores_box{
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 10px;
+    width: 128px;
+    height: 250px;
+    font-size: 13px;
+    border: solid #44abff;
+}
+.input_valores_box_adicionais{
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 10px;
+    width: 300px;
+    height: 250px;
+    font-size: 12px;
+    border: solid #44abff;
+    display: flex;
+    flex-direction: row;
+}
+#listavalores{
+    font-size: 12px;
+    list-style: none;
+    width: 150px;
+}
+.labels_contador{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.container_caixas, .container_despesas{
+    font-size: 20px;
+}
+#listaRelatorioDespesas{
+    color: red;
+}
+#gerar_relatorio {
+    width: 130px;
+    height: 35px;
+    border-radius: 20px;
+    color: #fff;
+    border: solid #bddcff 1px;
+    background-color: #33c539;   
+    cursor: pointer;
+    transition: 0.3s;
+}
+#gerar_relatorio:hover {
+    color: #33c539;
+    border: solid #33c539 1px;
+    background-color: #bddcff;   
+}
+input{
+    border-radius: 4px;
+    border: solid #1a6db1 1px;
+    background-color: #e3f1ff;
+}
+.button_adicionar, .button_calcular{
+    width: 117px;
+    height: 26px;
+    font-size: 12px;
+    border-radius: 20px;
+    color: #fff;
+    border: solid #bddcff 1px;
+    background-color: #028def;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.button_adicionar:hover, .button_calcular:hover{
+    color: #0068b3;
+    border: solid #028def 1px;
+    background-color: #cee5ff;
+}
+/* CSS popup */
+
+.relatorio {
+    margin: 20px; padding: 20px; border: solid rgb(0, 43, 136) 5px; width: 650px; height: 450px; display: flex; flex-direction: column; align-items: center;
+}
+.titulo_relatorio {
+    margin-top: 10px; margin-bottom: 60px;
+}
+.ul-nav-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.ul-nav-menu li {
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.ul-nav-menu a {
+    text-decoration: none;
+    border-left: solid #00579e 1px;
+    border-right: solid #00579e 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.3s;
+}
+.ul-nav-menu a:hover {
+    background-color: #1c7fc5;
+}
+#logo-site{
+    width: 130px; 
+    height: auto;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#logo-site:hover{
+    opacity: 80%;
+}
+.container_input_moedas {
+    display: flex;
+    flex-direction: row;
+}
+.body_central {
+    height: 90vh;
+}
+.bloco_calcular {
+    width: 645px; 
+    margin: 10px; 
+    display: flex; 
+    justify-content: space-between; 
+    border: solid #44abff 3px; 
+    padding: 15px; 
+    border-radius: 10px;
+}
+.bloco_dados_relatorio{
+    margin: 10px; 
+    margin-top: 15px; 
+    border: solid; 
+    border: solid #44abff 3px; 
+    padding: 20px; 
+    border-radius: 12px; 
+    width: 637px;
+}
+footer {
+    width: 100%; 
+    height: 4vh; 
+    background-color: #5b90d3; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+nav {
+    width: 100%;
+    height: 6vh;
+    background-color: #5b90d3; 
+    display: flex; 
+    align-content: center; 
+    align-items: center; 
+    justify-content: space-around;
+}
+header {
+    width: 100%;
+}
+
+
+@media (max-width: 600px) {
+    .container_main {
+        display: flex;
+        flex-direction: column;
+    }
+    .container_raiz {
+        width: auto;
+    }
+    .bloco_calcular {
+        width: 295px;
+    }
+    .bloco_dados_relatorio{
+        width: 282px;
+    }
+    .body_central {
+        height: auto;
+    }
+    footer{
+        height: 40px;
+    }
+    nav {
+        height: 60px;
+    }
+    body {
+        height: auto;
+    }header {
+        width: 100%;
+    }
+}
