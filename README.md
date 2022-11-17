@@ -18,4 +18,4 @@ Uma pagina em HTML e Javascript destinada a gerencias fundos de caixas e criar r
 ## Contatos
 
 - E-mail: adrielrosa@live.com
-- LinkedIn: https://www.linkedin.com/in/jonathan-ramos-p/
+- LinkedIn: https://www.linkedin.com/in/adriel-rosa-660431144/
